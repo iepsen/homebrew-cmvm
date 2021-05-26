@@ -8,10 +8,13 @@ class Cmvm < Formula
   version "0.1.0"
 
   def install
+    bin.install "cmvm"
+  end
+
+  def post_install
     cmvm_path = ENV["HOME"] + "/.cmvm"
     FileUtils.mkdir_p cmvm_path + "/bin"
     FileUtils.mkdir_p cmvm_path + "/versions"
-    bin.install "cmvm"
   end
 
   test do
