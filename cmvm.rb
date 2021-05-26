@@ -1,5 +1,3 @@
-require "fileutils"
-
 class Cmvm < Formula
   desc "CMake Version Manager brew formula"
   homepage "https://github.com/iepsen/cmvm/"
@@ -8,13 +6,9 @@ class Cmvm < Formula
   version "0.1.0"
 
   def install
+    mkdir_p "#{ENV["HOME"]}/.cmvm/bin"
+    mkdir_p "#{ENV["HOME"]}/.cmvm/versions"
     bin.install "cmvm"
-  end
-
-  def post_install
-    cmvm_path = ENV["HOME"] + "/.cmvm"
-    FileUtils.mkdir_p cmvm_path + "/bin"
-    FileUtils.mkdir_p cmvm_path + "/versions"
   end
 
   test do
