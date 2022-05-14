@@ -1,10 +1,16 @@
 class Cmvm < Formula
   desc "Manage multiple versions of CMake"
     homepage "https://github.com/iepsen/cmvm/"
-    url "https://github.com/iepsen/cmvm/archive/refs/tags/v0.2.2.zip"
-    sha256 "040368625f24bcf5046ec6b10a1eaf2ea87506d747695b84fa6e5dfd5939c780"
-    version "0.2.3"
-  
+    version "0.3.3"
+
+    if OS.mac?
+      url "https://github.com/iepsen/cmvm/releases/download/v#{version}/cmvm-x86_64-apple-darwin.tar.gz"
+      sha256 "0de37027dea96806704035677a7e0d5196cffa5d65bad773b452a3d4ce6d61e3"
+    elsif OS.linux?
+      url "https://github.com/iepsen/cmvm/releases/download/v#{version}/cmvm-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "84e554d1a2aa88886967700e40a8dba5e31799a62a8c572fdb96dfe39b82a3d4"
+    end
+
     def install
       bin.install "cmvm"
     end
