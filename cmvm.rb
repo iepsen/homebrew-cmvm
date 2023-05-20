@@ -5,10 +5,10 @@ class Cmvm < Formula
 
     if OS.mac?
       url "https://github.com/iepsen/cmvm/releases/download/v#{version}/cmvm-x86_64-apple-darwin.tar.gz"
-      sha256 "0de37027dea96806704035677a7e0d5196cffa5d65bad773b452a3d4ce6d61e3"
+      sha256 "b7e90cb3a54a15fb9aab36993ee76a76ff6592cbc01333fbcde10f2ec7784adc"
     elsif OS.linux?
       url "https://github.com/iepsen/cmvm/releases/download/v#{version}/cmvm-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "84e554d1a2aa88886967700e40a8dba5e31799a62a8c572fdb96dfe39b82a3d4"
+      sha256 "f6328de92379eac7aa73f9284f47be503358259a6e1a07a242cd69ab21a25291"
     end
 
     def install
