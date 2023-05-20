@@ -1,7 +1,7 @@
 class Cmvm < Formula
   desc "Manage multiple CMake versions"
     homepage "https://github.com/iepsen/cmvm/"
-    version "0.3.5"
+    version "0.3.6"
 
     if OS.mac?
       url "https://github.com/iepsen/cmvm/releases/download/v#{version}/cmvm-x86_64-apple-darwin.tar.gz"
